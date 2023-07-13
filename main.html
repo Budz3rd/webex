@@ -16,6 +16,13 @@
             padding: 20px;
             text-align: center;
             font-family: 'Open Sans', sans-serif;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .header-title {
+            flex-grow: 1;
+            text-align: left;
         }
 
         .container {
@@ -130,8 +137,10 @@
 </head>
 <body>
     <div class="header">
-        <h1>Online Web Compiler</h1>
-        <button onclick="toggleDarkMode()" class="options-btn">Toggle Dark Mode</button>
+        <div class="header-title">
+            <h1>Online Web Compiler</h1>
+        </div>
+        <button onclick="toggleDarkMode()" class="options-btn">Dark Mode</button>
     </div>
 
     <div class="container">
