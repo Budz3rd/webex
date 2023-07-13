@@ -67,7 +67,7 @@
         }
 
         .btn {
-            background-color: black;
+            background-color: grey;
             color: #fff;
             border: none;
             padding: 10px 20px;
@@ -75,6 +75,10 @@
             font-family: 'Open Sans', sans-serif;
             font-size: 14px;
             border-radius: 3px;
+        }
+
+        .btn.dark-mode {
+            background-color: black;
         }
 
         .btn:hover {
@@ -140,7 +144,7 @@
         <div class="header-title">
             <h1>Online Web Compiler</h1>
         </div>
-        <button onclick="toggleDarkMode()" class="options-btn">Dark Mode</button>
+        <button onclick="toggleDarkMode()" class="options-btn btn">Dark Mode</button>
     </div>
 
     <div class="container">
@@ -174,7 +178,6 @@
                 <!-- Result will be displayed here -->
             </div>
         </div>
-
     </div>
 
     <script>
@@ -346,11 +349,15 @@
         function toggleDarkMode() {
             var body = document.body;
             var elements = document.querySelectorAll('.header, .dashboard, .code-editor, .result');
+            var darkModeBtn = document.querySelector('.btn');
 
             body.classList.toggle('dark-mode');
             elements.forEach(function(element) {
                 element.classList.toggle('dark-mode');
             });
+
+            darkModeBtn.classList.toggle('dark-mode');
+            darkModeBtn.textContent = body.classList.contains('dark-mode') ? 'Light Mode' : 'Dark Mode';
         }
     </script>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
