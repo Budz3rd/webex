@@ -9,7 +9,8 @@
     }
     
     .book {
-      width: 400px;
+      width: 100%;
+      max-width: 400px;
       height: 400px;
       background-color: #fff;
       margin: 0 auto;
@@ -74,6 +75,18 @@
       text-align: center;
       margin-top: 20px;
     }
+    
+    @media (min-width: 576px) {
+      .book {
+        max-width: 600px;
+      }
+    }
+    
+    @media (min-width: 768px) {
+      .book {
+        max-width: 800px;
+      }
+    }
   </style>
   <script>
     var currentPage = 0;
@@ -107,7 +120,7 @@
     }
     
     function goHome() {
-      window.location.href = 'main.html';
+      window.location.href = 'home.html';
     }
     
     function updateButtonVisibility() {
@@ -129,8 +142,8 @@
 </head>
 <body onload="initializeBook()">
   <div class="book">
+    <button class="button home-button" onclick="goHome()">Home</button>
     <div class="box">
-      <button class="button home-button" onclick="goHome()">Home</button>
       <div class="page">
         <h2>Lesson 1: Introduction to HTML</h2>
         <p>To create an HTML document, start with the following structure:</p>
@@ -313,65 +326,68 @@
               // Code to execute if variable matches value2
               break;
             default:
-              // Code to execute if variable doesn't match any value
+              // Code to execute if variable matches none of the values
+              break;
           }
         </pre>
       </div>
       
       <div class="page hidden">
         <h2>Lesson 16: Loops in JavaScript</h2>
-        <p>Using for loops and while loops to repeat code:</p>
+        <p>Using loops to iterate over arrays or repeat code blocks:</p>
         <pre>
           for (var i = 0; i < 5; i++) {
             console.log(i);
           }
           
-          var i = 0;
-          while (i < 5) {
-            console.log(i);
-            i++;
+          while (condition) {
+            // Code to execute as long as condition is true
           }
         </pre>
       </div>
       
       <div class="page hidden">
-        <h2>Lesson 17: Working with Arrays in JavaScript</h2>
-        <p>Storing and manipulating collections of data using arrays:</p>
+        <h2>Lesson 17: Document Object Model (DOM)</h2>
+        <p>Manipulating HTML elements using JavaScript and the DOM:</p>
         <pre>
-          var fruits = ['apple', 'banana', 'orange'];
-          console.log(fruits[0]); // Output: apple
+          document.getElementById('myElement').innerHTML = 'New content';
           
-          fruits.push('pear');
-          console.log(fruits); // Output: ['apple', 'banana', 'orange', 'pear']
+          var elements = document.getElementsByClassName('myClass');
         </pre>
       </div>
       
       <div class="page hidden">
-        <h2>Lesson 18: Web Performance Optimization</h2>
-        <p>Improving your website's performance for faster loading:</p>
+        <h2>Lesson 18: Introduction to APIs</h2>
+        <p>Working with APIs to retrieve and use data from external sources:</p>
         <pre>
-          &lt;!-- Minify and compress CSS and JavaScript files --&gt;
-          &lt;link rel="stylesheet" href="styles.min.css"&gt;
-          &lt;script src="script.min.js"&gt;&lt;/script&gt;
+          fetch('https://api.example.com/data')
+            .then(function(response) {
+              return response.json();
+            })
+            .then(function(data) {
+              console.log(data);
+            });
         </pre>
       </div>
       
       <div class="page hidden">
-        <h2>Lesson 19: Working with APIs</h2>
-        <p>Integrating external services and data using APIs:</p>
+        <h2>Lesson 19: Introduction to JSON</h2>
+        <p>Using JSON (JavaScript Object Notation) for data interchange:</p>
         <pre>
-          &lt;script src="https://api.example.com/api.js"&gt;&lt;/script&gt;
-          &lt;script&gt;
-            // Use API functions here
-          &lt;/script&gt;
+          {
+            "name": "John",
+            "age": 25,
+            "isStudent": true,
+            "grades": [90, 85, 95]
+          }
         </pre>
       </div>
       
       <div class="page hidden">
-        <h2>Lesson 20: Handling Forms and Validation</h2>
-        <p>Processing form data and validating user input:</p>
+        <h2>Lesson 20: Form Handling in JavaScript</h2>
+        <p>Working with form data and handling form submissions in JavaScript:</p>
         <pre>
-          &lt;form action="/submit" method="post"&gt;
+          &lt;form&gt;
             &lt;input type="text" name="name" placeholder="Your name" required&gt;
             &lt;input type="email" name="email" placeholder="Your email" required&gt;
             &lt;button type="submit"&gt;Submit&lt;/button&gt;
