@@ -118,6 +118,10 @@
             background-color: #303030;
         }
 
+        .header.dark-mode .header-title {
+            color: #fff; /* Change header title color to white */
+        }
+
         .dashboard.dark-mode {
             background-color: #1f1f1f;
         }
@@ -136,6 +140,40 @@
 
         .languageOptions.active {
             display: block;
+        }
+
+        .learning-hub {
+            margin-bottom: 20px;
+            text-align: center;
+            color: #000; /* Added color for dark mode compatibility */
+        }
+
+        .learning-hub h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .learning-hub .button-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .learning-hub .button-container .btn {
+            margin: 0 10px;
+        }
+
+        .box {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            color: #000; /* Added color for dark mode compatibility */
+        }
+
+        /* Additional styles for dark mode */
+        .box.dark-mode {
+            background-color: #1f1f1f;
+            color: #fff;
         }
     </style>
 </head>
@@ -156,6 +194,18 @@
                 <ul id="projectList" class="project-list">
                     <!-- Project list will be populated dynamically -->
                 </ul>
+            </div>
+
+            <!-- New Box -->
+            <div class="box">
+                <div class="learning-hub">
+                    <h2>Learning Hub</h2>
+                    <div class="button-container">
+                        <button onclick="location.href='javascript.html'" class="btn">JavaScript</button>
+                        <button onclick="location.href='html.html'" class="btn">HTML</button>
+                        <button onclick="location.href='python.html'" class="btn">Python</button>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -358,6 +408,19 @@
 
             darkModeBtn.classList.toggle('dark-mode');
             darkModeBtn.textContent = body.classList.contains('dark-mode') ? 'Light Mode' : 'Dark Mode';
+
+            // Update learning hub styles for dark mode compatibility
+            var learningHub = document.querySelector('.learning-hub');
+            learningHub.classList.toggle('dark-mode');
+            if (body.classList.contains('dark-mode')) {
+                learningHub.style.color = '#fff';
+            } else {
+                learningHub.style.color = '#000';
+            }
+
+            // Update new box styles for dark mode compatibility
+            var newBox = document.querySelector('.box');
+            newBox.classList.toggle('dark-mode');
         }
     </script>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
