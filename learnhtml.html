@@ -6,32 +6,36 @@
   <style>
     body {
       font-family: 'Open Sans', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
     }
     
     .book {
       width: 100%;
       max-width: 400px;
-      height: 400px;
       background-color: #fff;
-      margin: 0 auto;
       position: relative;
       overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      margin-bottom: 20px;
+    }
+    
+    .header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      font-weight: bold;
     }
     
     .box {
-      width: 100%;
-      height: 100%;
-      background-color: #fff;
-      overflow: auto;
       padding: 20px;
       box-sizing: border-box;
     }
     
     .page {
-      width: 100%;
       display: none;
     }
     
@@ -71,12 +75,11 @@
     .home-button {
       position: absolute;
       top: 10px;
-      left: 10px;
+      right: 10px;
     }
     
     .book-controls {
       text-align: center;
-      margin-top: 20px;
     }
     
     @media (min-width: 576px) {
@@ -123,7 +126,7 @@
     }
     
     function goHome() {
-      window.location.href = 'main.html';
+      window.location.href = 'home.html';
     }
     
     function updateButtonVisibility() {
@@ -146,6 +149,9 @@
 <body onload="initializeBook()">
   <div class="book">
     <button class="button home-button" onclick="goHome()">Home</button>
+    <div class="header">
+      <h2>HTML Lessons</h2>
+    </div>
     <div class="box">
       <div class="page">
         <h2>Lesson 1: Introduction to HTML</h2>
@@ -173,7 +179,7 @@
         </pre>
       </div>
       
-      <div class="page hidden">
+      <div class="page">
         <h2>Lesson 3: Adding Images</h2>
         <p>You can add images to your HTML page using the `<img>` tag:</p>
         <pre>
@@ -181,7 +187,7 @@
         </pre>
       </div>
       
-      <div class="page hidden">
+      <div class="page">
         <h2>Lesson 4: Creating Lists</h2>
         <p>Lists can be created using the `<ul>`, `<ol>`, and `<li>` tags:</p>
         <pre>
@@ -199,7 +205,7 @@
         </pre>
       </div>
       
-      <div class="page hidden">
+      <div class="page">
         <h2>Lesson 5: Formatting Text</h2>
         <p>You can format your text using various HTML tags:</p>
         <pre>
@@ -209,7 +215,7 @@
         </pre>
       </div>
       
-      <div class="page hidden">
+      <div class="page">
         <h2>Lesson 6: Working with Links</h2>
         <p>You can create clickable links using the `<a>` tag:</p>
         <pre>
@@ -217,7 +223,7 @@
         </pre>
       </div>
       
-      <div class="page hidden">
+      <div class="page">
         <h2>Lesson 7: Adding CSS Styles</h2>
         <p>You can apply CSS styles to your HTML elements using inline styles or external style sheets:</p>
         <pre>
@@ -227,7 +233,7 @@
         </pre>
       </div>
       
-      <div class="page hidden">
+      <div class="page">
         <h2>Lesson 8: Inline Styles vs. External Stylesheets</h2>
         <p>Comparing inline styles and external stylesheets for CSS styling:</p>
         <pre>
@@ -237,7 +243,7 @@
         </pre>
       </div>
       
-      <div class="page hidden">
+      <div class="page">
         <h2>Lesson 9: Working with CSS Selectors</h2>
         <p>Using CSS selectors to target and style specific HTML elements:</p>
         <pre>
@@ -256,7 +262,7 @@
         </pre>
       </div>
       
-      <div class="page hidden">
+      <div class="page">
         <h2>Lesson 10: CSS Box Model</h2>
         <p>Understanding the CSS box model for element layout and spacing:</p>
         <pre>
@@ -270,7 +276,7 @@
         </pre>
       </div>
       
-      <div class="page hidden">
+      <div class="page">
         <h2>Lesson 11: Responsive Web Design</h2>
         <p>Creating websites that adapt to different screen sizes and devices:</p>
         <pre>
@@ -280,7 +286,7 @@
         </pre>
       </div>
       
-      <div class="page hidden">
+      <div class="page">
         <h2>Lesson 12: Introduction to JavaScript</h2>
         <p>Adding interactivity and dynamic functionality to your website:</p>
         <pre>
@@ -288,7 +294,7 @@
         </pre>
       </div>
       
-      <div class="page hidden">
+      <div class="page">
         <h2>Lesson 13: Variables and Data Types in JavaScript</h2>
         <p>Working with variables and different data types in JavaScript:</p>
         <pre>
@@ -299,7 +305,7 @@
         </pre>
       </div>
       
-      <div class="page hidden">
+      <div class="page">
         <h2>Lesson 14: JavaScript Functions</h2>
         <p>Defining and using functions to organize and reuse code:</p>
         <pre>
@@ -311,7 +317,7 @@
         </pre>
       </div>
       
-      <div class="page hidden">
+      <div class="page">
         <h2>Lesson 15: Conditional Statements in JavaScript</h2>
         <p>Using if statements and switch statements to make decisions:</p>
         <pre>
@@ -335,7 +341,7 @@
         </pre>
       </div>
       
-      <div class="page hidden">
+      <div class="page">
         <h2>Lesson 16: Loops in JavaScript</h2>
         <p>Using loops to iterate over arrays or repeat code blocks:</p>
         <pre>
@@ -349,7 +355,7 @@
         </pre>
       </div>
       
-      <div class="page hidden">
+      <div class="page">
         <h2>Lesson 17: Document Object Model (DOM)</h2>
         <p>Manipulating HTML elements using JavaScript and the DOM:</p>
         <pre>
@@ -359,7 +365,7 @@
         </pre>
       </div>
       
-      <div class="page hidden">
+      <div class="page">
         <h2>Lesson 18: Introduction to APIs</h2>
         <p>Working with APIs to retrieve and use data from external sources:</p>
         <pre>
@@ -373,7 +379,7 @@
         </pre>
       </div>
       
-      <div class="page hidden">
+      <div class="page">
         <h2>Lesson 19: Introduction to JSON</h2>
         <p>Using JSON (JavaScript Object Notation) for data interchange:</p>
         <pre>
@@ -386,38 +392,49 @@
         </pre>
       </div>
       
-      <div class="page hidden">
-        <h2>Lesson 20: Form Handling in JavaScript</h2>
-        <p>Working with form data and handling form submissions in JavaScript:</p>
+      <div class="page">
+        <h2>Lesson 20: Introduction to AJAX</h2>
+        <p>Asynchronous JavaScript and XML (AJAX) for making server requests:</p>
+        <pre>
+          var xhr = new XMLHttpRequest();
+          xhr.open('GET', 'data.json', true);
+          xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+              var data = JSON.parse(xhr.responseText);
+              console.log(data);
+            }
+          };
+          xhr.send();
+        </pre>
+      </div>
+      
+      <div class="page">
+        <h2>Lesson 21: Form Handling in HTML</h2>
+        <p>Working with HTML forms and handling user input:</p>
         <pre>
           &lt;form&gt;
-            &lt;input type="text" name="name" placeholder="Your name" required&gt;
-            &lt;input type="email" name="email" placeholder="Your email" required&gt;
-            &lt;button type="submit"&gt;Submit&lt;/button&gt;
+            &lt;input type="text" name="username"&gt;
+            &lt;input type="password" name="password"&gt;
+            &lt;input type="submit" value="Submit"&gt;
           &lt;/form&gt;
         </pre>
       </div>
       
-      <div class="page hidden">
-        <h2>Lesson 21: Introduction to Responsive Frameworks</h2>
-        <p>Using responsive frameworks like Bootstrap to build responsive websites:</p>
+      <div class="page">
+        <h2>Lesson 22: Introduction to Bootstrap</h2>
+        <p>Using the Bootstrap framework for responsive web design and UI components:</p>
         <pre>
-          &lt;link rel="stylesheet" href="https://cdn.example.com/bootstrap.min.css"&gt;
-          &lt;script src="https://cdn.example.com/bootstrap.min.js"&gt;&lt;/script&gt;
+          &lt;link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"&gt;
+          
+          &lt;div class="container"&gt;
+            &lt;h1&gt;Hello, world!&lt;/h1&gt;
+          &lt;/div&gt;
+          
+          &lt;script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"&gt;&lt;/script&gt;
         </pre>
       </div>
       
-      <div class="page hidden">
-        <h2>Lesson 22: Introduction to Version Control</h2>
-        <p>Managing and tracking changes in your code using version control systems:</p>
-        <pre>
-          $ git init
-          $ git add .
-          $ git commit -m "Initial commit"
-        </pre>
-      </div>
-      
-      <div class="page hidden">
+      <div class="page">
         <h2>Lesson 23: Deploying a Website</h2>
         <p>Deploying your website to a web server or hosting platform:</p>
         <pre>
@@ -428,10 +445,10 @@
       <!-- Add more lessons... -->
       
     </div>
-  </div>
-  <div class="book-controls">
-    <button id="backButton" class="button back-button hidden-button" onclick="switchPage('back')">Back</button>
-    <button id="nextButton" class="button" onclick="switchPage('next')">Next</button>
+    <div class="book-controls">
+      <button id="backButton" class="button back-button hidden-button" onclick="switchPage('back')">Back</button>
+      <button id="nextButton" class="button" onclick="switchPage('next')">Next</button>
+    </div>
   </div>
 </body>
 </html>
