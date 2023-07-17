@@ -7,11 +7,18 @@
     <style>
         body {
             font-family: 'Open Sans', sans-serif;
-            overflow-y: scroll; /* Add this line to enable scrolling */
-            scrollbar-width: none; /* Add this line to hide the scrollbar for Firefox */
+            overflow-y: scroll;
+            scrollbar-width: thin; /* For Firefox */
+            scrollbar-color: transparent transparent; /* For Firefox */
         }
         body::-webkit-scrollbar {
-            width: 0px; /* Add this line to hide the scrollbar for Chrome, Safari, and Edge */
+            width: 0.5rem; /* For Chrome, Safari, and Edge */
+        }
+        body::-webkit-scrollbar-track {
+            background-color: transparent; /* For Chrome, Safari, and Edge */
+        }
+        body::-webkit-scrollbar-thumb {
+            background-color: transparent; /* For Chrome, Safari, and Edge */
         }
         header {
             text-align: center;
