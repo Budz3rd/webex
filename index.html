@@ -7,6 +7,11 @@
     <style>
         body {
             font-family: 'Open Sans', sans-serif;
+            overflow-y: scroll; /* Add this line to enable scrolling */
+            scrollbar-width: none; /* Add this line to hide the scrollbar for Firefox */
+        }
+        body::-webkit-scrollbar {
+            width: 0px; /* Add this line to hide the scrollbar for Chrome, Safari, and Edge */
         }
         header {
             text-align: center;
@@ -51,7 +56,7 @@
     </header>
     
     <div id="content">
-        <h2>Experience the future of coding at Weeblix</h2>
+        <h2>Experience the future of coding at [Your Company Name]</h2>
         <p>Our platform combines the functionality of GitHub with an interactive learning environment, empowering users to create and learn code effortlessly. Develop your skills, collaborate with like-minded coders, and unleash your programming potential. Join us now and take your coding journey to new heights.</p>
         <button onclick="window.location.href = 'main.html';">Get Started</button>
         <h3>About Us</h3>
