@@ -19,6 +19,9 @@
         #content {
             text-align: center;
             margin-top: 50px;
+            max-width: 600px; /* Adjust the max-width here to make the content wider */
+            margin-left: auto;
+            margin-right: auto;
         }
         #footer {
             background-color: black;
@@ -32,12 +35,16 @@
             background-color: black;
             color: white;
             font-family: 'Open Sans', sans-serif;
-            padding: 20px 40px; /* Adjust the padding here to make the button larger */
-            font-size: 24px; /* Adjust the font-size here to make the text larger */
+            padding: 15px 30px; /* Adjust the padding here to make the button larger */
+            font-size: 20px; /* Adjust the font-size here to make the text larger */
             border: none;
             cursor: pointer;
             border-radius: 5px;
             margin-top: 10px;
+        }
+        a.contact-link {
+            color: #007BFF; /* Adjust the color here */
+            text-decoration: none;
         }
     </style>
 </head>
@@ -53,6 +60,7 @@
     </div>
     
     <footer id="footer">
+        <p><a href="mailto:help@weeblix.com" class="contact-link">Contact Us</a></p>
         <p>© 2023</p>
     </footer>
 </body>
